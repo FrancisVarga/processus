@@ -134,9 +134,7 @@ namespace Processus
 
                 return $this;
 
-            }
-            catch (\Exception $e)
-            {
+            } catch (\Exception $e) {
                 echo json_encode($e);
                 return FALSE;
             }
@@ -193,7 +191,7 @@ namespace Processus
          *
          * @return mixed
          */
-        public static function handleError($errorObj)
+        public static function handleError($errorObj = NULL)
         {
             if ($errorObj == NULL || $errorObj == E_RECOVERABLE_ERROR || $errorObj == E_NOTICE || $errorObj == E_WARNING) {
                 return;
