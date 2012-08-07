@@ -17,11 +17,6 @@ namespace Application
         private static $_instance;
 
         /**
-         * @var \Application\Vo\SendGrid\SendGridConfig
-         */
-        private $_sendGridConfig;
-
-        /**
          * @var \Application\Mvo\AppUserMvo
          */
         private $_userAppMvo;
@@ -37,18 +32,6 @@ namespace Application
             }
 
             return self::$_instance;
-        }
-
-        /**
-         * @return Vo\SendGrid\SendGridConfig
-         */
-        public function getSendgridConfig()
-        {
-            if (!$this->_sendGridConfig) {
-                $this->_sendGridConfig = new \Application\Vo\SendGrid\SendGridConfig();
-                $this->_sendGridConfig->setData($this->getRegistry()->getConfig('SendGrid'));
-            }
-            return $this->_sendGridConfig;
         }
 
         /**
