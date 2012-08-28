@@ -7,7 +7,7 @@ namespace Processus\Lib\Db
         /**
          * @var \Memcached
          */
-        private $_memcachedClient;
+        protected $_memcachedClient;
 
         /**
          * @param string $host
