@@ -45,7 +45,7 @@ namespace Processus\Abstracts\JsonRpc
         {
             parent::__construct();
             list ($this->_domain, $this->_class, $this->_method) = explode('.',
-                parent::getMethod());
+                $this->getMethod());
         }
 
         /**
