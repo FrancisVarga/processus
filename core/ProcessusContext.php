@@ -75,6 +75,7 @@ namespace Processus
         public function setBootstrap(ProcessusBootstrap $bootstrap)
         {
             $this->_bootstrap = $bootstrap;
+
             return $this;
         }
 
@@ -87,9 +88,10 @@ namespace Processus
         }
 
         /**
+         * @param int $cacheType
          * @return Lib\Db\Memcached
          */
-        public function getDefaultCache()
+        public function getDefaultCache($cacheType = \Processus\Consta\MemcachedFactoryType::MEMCACHED_BINARY)
         {
             if (!$this->_memcached) {
 
@@ -99,7 +101,7 @@ namespace Processus
                     ->getCouchbasePortByDatabucketKey("default");
 
                 $this->_memcached = \Processus\Lib\Server\ServerFactory::memcachedFactory(
-                    $config['host'], $config['port']
+                    $config['host'], $config['port'], NULL, $cacheType
                 );
             }
 
@@ -116,6 +118,7 @@ namespace Processus
                 $this->_registry = new ProcessusRegistry();
                 $this->_registry->init();
             }
+
             return $this->_registry;
         }
 
@@ -126,6 +129,7 @@ namespace Processus
         public function setRegistry(ProcessusRegistry $registry)
         {
             $this->_registry = $registry;
+
             return $this;
         }
 
@@ -137,6 +141,7 @@ namespace Processus
             if (!$this->_facebookClient) {
                 $this->_facebookClient = new \Processus\Lib\Facebook\FacebookClient();
             }
+
             return $this->_facebookClient;
         }
 
@@ -150,6 +155,7 @@ namespace Processus
             if (!$this->_userBo) {
                 $this->_userBo = new \Processus\Lib\Bo\UserBo();
             }
+
             return $this->_userBo;
         }
 
@@ -161,6 +167,7 @@ namespace Processus
         public function setUserBo(\Processus\Lib\Bo\UserBo $bo)
         {
             $this->_userBo = $bo;
+
             return $this;
         }
 
