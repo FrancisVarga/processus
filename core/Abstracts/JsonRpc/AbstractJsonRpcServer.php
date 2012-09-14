@@ -78,10 +78,10 @@ namespace Processus\Abstracts\JsonRpc
         {
             // if valid request let it handle via Zend\Json\Server\Server
             if ($this->isValidRequest() === TRUE) {
-                $this->_run();
-            }
-            else
-            {
+                // set class
+                $this->setClass($this->getRequest()->getSpecifiedServiceClassName());
+
+                // Handle the request:
                 $exception = new \Processus\Exceptions\JsonRpc\ServerException("Invalid Server Class.");
                 $exception->setMethod(__METHOD__);
                 throw $exception;
@@ -92,21 +92,11 @@ namespace Processus\Abstracts\JsonRpc
 
 
         /**
-         * internal run method
-         */
         protected function _run()
-        {
             // set class
-            $this->setClass($this->getRequest()->getSpecifiedServiceClassName());
-
-            // Handle the request:
             $this->handle();
         }
 
-        // #########################################################
-
-
-        /**
          * @return \Processus\Abstracts\JsonRpc\AbstractJsonRpcRequest
          */
         public function getRequest()
