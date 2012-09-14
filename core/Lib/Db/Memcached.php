@@ -19,7 +19,7 @@ namespace Processus\Lib\Db
          * @param string $port
          * @param string $id
          */
-        public function __construct(string $host, string $port, $id = "default")
+        public function __construct(\string $host, \string $port, $id = "default")
         {
             $this->_memcachedClient = new \Memcached($id);
 
@@ -34,6 +34,14 @@ namespace Processus\Lib\Db
                 $this->_memcachedClient->addServer($host, $port);
             }
 
+        }
+
+        /**
+         * @return \Memcached
+         */
+        public function getMemClient()
+        {
+            return $this->_memcachedClient;
         }
 
         /**
@@ -81,6 +89,7 @@ namespace Processus\Lib\Db
         {
             $this->_memcachedClient->set($key, $value, $expiredTime);
             $resultCode = $this->_memcachedClient->getResultCode();
+
             return $resultCode;
         }
 
@@ -91,7 +100,8 @@ namespace Processus\Lib\Db
          */
         public function getMultipleByKey(array $keys)
         {
-            $stupidPHP = null;
+            $stupidPHP = NULL;
+
             return $this->_memcachedClient->getMulti($keys, $stupidPHP, \Memcached::GET_PRESERVE_ORDER);
         }
 

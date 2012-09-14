@@ -32,6 +32,14 @@ namespace Processus\Lib\Db
         }
 
         /**
+         * @return \Memcached
+         */
+        public function getMemClient()
+        {
+            return $this->_memcachedClient;
+        }
+
+        /**
          * @return array
          */
         public function getStats()
