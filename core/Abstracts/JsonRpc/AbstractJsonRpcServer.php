@@ -44,9 +44,7 @@ namespace Processus\Abstracts\JsonRpc
         {
             if ($this->validateConfigKey('validClasses') && in_array($this->getRequest()->getClass(), $this->getConfigValue('validClasses'))) {
                 return TRUE;
-            }
-            else
-            {
+            } else {
                 $exception = new \Processus\Exceptions\JsonRpc\ValidJsonRpcRequest("Is not a valid class!", "PRC-2001_" . __METHOD__, "10", __FILE__, __LINE__);
                 throw $exception;
             }
@@ -57,7 +55,7 @@ namespace Processus\Abstracts\JsonRpc
 
         /**
          * @return bool
-         * @throws \Processus\Exceptions\JsonRpc\ValidJsonRpcRequest
+         * @throws \Exception
          */
         public function isValidRequest()
         {
@@ -72,6 +70,7 @@ namespace Processus\Abstracts\JsonRpc
 
 
         /**
+         * @return null|\Zend\Json\Server\Zend\Json\Server\Response
          * @throws \Processus\Exceptions\JsonRpc\ServerException
          */
         public function run()
@@ -82,6 +81,8 @@ namespace Processus\Abstracts\JsonRpc
                 $this->setClass($this->getRequest()->getSpecifiedServiceClassName());
 
                 // Handle the request:
+                return $this->handle();
+            } else {
                 $exception = new \Processus\Exceptions\JsonRpc\ServerException("Invalid Server Class.");
                 $exception->setMethod(__METHOD__);
                 throw $exception;
@@ -92,11 +93,6 @@ namespace Processus\Abstracts\JsonRpc
 
 
         /**
-        protected function _run()
-            // set class
-            $this->handle();
-        }
-
          * @return \Processus\Abstracts\JsonRpc\AbstractJsonRpcRequest
          */
         public function getRequest()
@@ -118,7 +114,7 @@ namespace Processus\Abstracts\JsonRpc
                 return $this->_config[$key];
             }
 
-            return false;
+            return FALSE;
         }
 
         /**
@@ -129,7 +125,7 @@ namespace Processus\Abstracts\JsonRpc
          */
         public function getResponse()
         {
-            if (null === ($response = $this->_response)) {
+            if (NULL === ($response = $this->_response)) {
 
                 $responseClass = $this->getConfigValue('namespace') . "\\" . "Response";
                 $responseFile  = str_replace("\\", "/", $this->getConfigValue('namespace') . "\\" . "Response");
@@ -137,8 +133,7 @@ namespace Processus\Abstracts\JsonRpc
 
                 if ($classExist) {
 
-                    try
-                    {
+                    try {
 
                         /** @var $responseClass \Processus\Abstracts\JsonRpc\AbstractJsonRpcResponse */
                         $this->_response = new $responseClass();
@@ -146,13 +141,13 @@ namespace Processus\Abstracts\JsonRpc
 
                         return $this->_response;
 
-                    } catch (\Exception $error)
-                    {
+                    } catch (\Exception $error) {
                         throw $error;
                     }
 
                 }
             }
+
             return $this->_response;
         }
 
@@ -164,6 +159,7 @@ namespace Processus\Abstracts\JsonRpc
         public function setResponse(AbstractJsonRpcResponse $response)
         {
             $this->_response = $response;
+
             return $this;
         }
 
@@ -179,10 +175,10 @@ namespace Processus\Abstracts\JsonRpc
 
             $response->setServiceMap($this->getServiceMap());
 
-            if (null !== ($id = $request->getId())) {
+            if (NULL !== ($id = $request->getId())) {
                 $response->setId($id);
             }
-            if (null !== ($version = $request->getVersion())) {
+            if (NULL !== ($version = $request->getVersion())) {
                 $response->setVersion($version);
             }
 
