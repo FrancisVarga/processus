@@ -23,7 +23,6 @@ class CouchbaseClient implements \Processus\Interfaces\InterfaceDatabase
     public function __construct(\string $host, \string $userName, \string $password, \string $couchbaseBucket)
     {
         $this->_couchbaseClient = new \Couchbase($host, $userName, $password, $couchbaseBucket);
-
         $this->_couchbaseClient->setOption(COUCHBASE_OPT_COMPRESSER, FALSE);
     }
 
