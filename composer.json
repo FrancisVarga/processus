@@ -37,7 +37,7 @@
         "zendframework/zend-db":"2.0",
         "zendframework/zend-server":"2.0",
         "zendframework/zend-http":"2.0",
-		"zendframework/zend-json":"2.0",
+        "zendframework/zend-json":"2.0",
         "processus/ruhebett":"*",
         "processus/schnarchnase":"*",
         "processus/jsonrpcpipe":"*",
