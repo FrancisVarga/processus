@@ -1,6 +1,6 @@
 {
-    "name":"national-security",
-    "description":"Some Internal Tools with all keys needed!",
+    "name":"processus/framework",
+    "description":"JSON-RPC Framework for Apps and Games",
     "autoload":{
         "psr-0":{
             "Processus\\":"core/"
