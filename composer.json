@@ -13,10 +13,6 @@
         },
         {
             "type":"vcs",
-            "url":"https://github.com/Crowdpark/processus-ruhebett.git"
-        },
-        {
-            "type":"vcs",
             "url":"https://github.com/Crowdpark/processus-schnarchnase.git"
         },
         {
@@ -26,6 +22,11 @@
         {
             "type":"vcs",
             "url":"https://github.com/Crowdpark/processus-spl.git"
+        },
+
+        {
+            "type":"vcs",
+            "url":"https://github.com/Crowdpark/processus-ruhebett.git"
         },
         {
             "type":"vcs",
