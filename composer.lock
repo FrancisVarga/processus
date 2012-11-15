@@ -1,5 +1,5 @@
 {
-    "hash": "8f6f584acdcbc8dd5dbbc374935b8f5f",
+    "hash": "29dbe77383df9e03465e005d15f3be29",
     "packages": [
         {
             "name": "facebook/php-sdk",
@@ -43,6 +43,65 @@
                 "facebook",
                 "sdk"
             ]
+        },
+        {
+            "name": "monolog/monolog",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FrancisVarga/monolog.git",
+                "reference": "a90496bfa20598d51e10153fd3b8e8c7a1730ede"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/FrancisVarga/monolog/archive/a90496bfa20598d51e10153fd3b8e8c7a1730ede.zip",
+                "reference": "a90496bfa20598d51e10153fd3b8e8c7a1730ede",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "mlehner/gelf-php": "1.0.*"
+            },
+            "suggest": {
+                "mlehner/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+                "ext-mongo": "Allow sending log messages to a MongoDB server",
+                "ext-zmq": "Allow sending log messages to a ZeroMQ server"
+            },
+            "time": "1353012242",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Monolog": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Logging for PHP 5.3",
+            "homepage": "http://github.com/Seldaek/monolog",
+            "keywords": [
+                "log",
+                "logging"
+            ],
+            "support": {
+                "source": "https://github.com/FrancisVarga/monolog/tree/master"
+            }
         },
         {
             "name": "mustache/mustache",
@@ -184,18 +243,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Crowdpark/processus-ruhebett.git",
-                "reference": "525b087202e20e09fe44911fc923d570b0a0da72"
+                "reference": "977797b451d8da10d628ea6b33ca7771e96a2269"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/Crowdpark/processus-ruhebett/archive/525b087202e20e09fe44911fc923d570b0a0da72.zip",
-                "reference": "525b087202e20e09fe44911fc923d570b0a0da72",
+                "url": "https://github.com/Crowdpark/processus-ruhebett/archive/977797b451d8da10d628ea6b33ca7771e96a2269.zip",
+                "reference": "977797b451d8da10d628ea6b33ca7771e96a2269",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "1351706976",
+            "time": "1352477050",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -264,18 +323,18 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:Crowdpark/processus-spl.git",
-                "reference": "f6fc9e0ab353d3fb5ccd85612555823f7b0fff68"
+                "reference": "72392d81a896355725a0522fa0edabf3fa55bce2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/Crowdpark/processus-spl/archive/f6fc9e0ab353d3fb5ccd85612555823f7b0fff68.zip",
-                "reference": "f6fc9e0ab353d3fb5ccd85612555823f7b0fff68",
+                "url": "https://github.com/Crowdpark/processus-spl/archive/72392d81a896355725a0522fa0edabf3fa55bce2.zip",
+                "reference": "72392d81a896355725a0522fa0edabf3fa55bce2",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "1352291511",
+            "time": "1352813470",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -430,12 +489,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/ClassLoader",
-                "reference": "v2.1.3"
+                "reference": "29e26e8a3df2fd62a569e2bab41166e1798b1e0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/ClassLoader/archive/v2.1.3.zip",
-                "reference": "v2.1.3",
+                "url": "https://github.com/symfony/ClassLoader/archive/29e26e8a3df2fd62a569e2bab41166e1798b1e0c.zip",
+                "reference": "29e26e8a3df2fd62a569e2bab41166e1798b1e0c",
                 "shasum": ""
             },
             "require": {
@@ -444,7 +503,7 @@
             "require-dev": {
                 "symfony/finder": "2.1.*"
             },
-            "time": "1351353561",
+            "time": "1352368308",
             "type": "library",
             "extra": {
                 "branch-alias": {

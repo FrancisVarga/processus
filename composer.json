@@ -31,6 +31,10 @@
         {
             "type":"vcs",
             "url":"https://github.com/Crowdpark/php-ga.git"
+        },
+        {
+            "type":"vcs",
+            "url":"https://github.com/FrancisVarga/monolog.git"
         }
     ],
     "require":{
@@ -48,11 +52,13 @@
         "pda/pheanstalk":"dev-master",
         "riak/riak-client":"*",
         "facebook/php-sdk":"dev-master",
-        "unitedprototype/php-ga":"dev-master"
+        "unitedprototype/php-ga":"dev-master",
+        "monolog/monolog":"master"
     },
-    "extra": {
-        "processus-app-dir": "application",
-        "processus-web-dir": "htdocs"
-	},
+    "extra":{
+        "processus-app-dir":"application",
+        "processus-web-dir":"htdocs"
+    },
+    "bin":["bin/speedy.php", "bin/worker.sh"],
     "minimum-stability":"dev"
 }
