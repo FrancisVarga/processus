@@ -53,12 +53,17 @@
         "riak/riak-client":"*",
         "facebook/php-sdk":"dev-master",
         "unitedprototype/php-ga":"dev-master",
-        "monolog/monolog":"master"
+        "monolog/monolog":"master",
+        "symfony/console":"dev-master"
     },
     "extra":{
         "processus-app-dir":"application",
         "processus-web-dir":"htdocs"
     },
-    "bin":["bin/speedy.php", "bin/worker.sh"],
+    "bin":[
+        "bin/speedy.php",
+        "bin/worker.sh",
+        "console/cli.php"
+    ],
     "minimum-stability":"dev"
 }

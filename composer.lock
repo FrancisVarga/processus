@@ -1,5 +1,5 @@
 {
-    "hash": "29dbe77383df9e03465e005d15f3be29",
+    "hash": "947dcf14ad6fff578a46ccbb4bd48fd4",
     "packages": [
         {
             "name": "facebook/php-sdk",
@@ -533,6 +533,53 @@
             "homepage": "http://symfony.com"
         },
         {
+            "name": "symfony/console",
+            "version": "dev-master",
+            "target-dir": "Symfony/Component/Console",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Console",
+                "reference": "6da537054e8f9f795e64a5b02eb7f9646c9b59e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/symfony/Console/archive/6da537054e8f9f795e64a5b02eb7f9646c9b59e7.zip",
+                "reference": "6da537054e8f9f795e64a5b02eb7f9646c9b59e7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "time": "1352815684",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Console\\": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Console Component",
+            "homepage": "http://symfony.com"
+        },
+        {
             "name": "unitedprototype/php-ga",
             "version": "dev-master",
             "source": {
@@ -679,6 +726,7 @@
         "processus/spl": 20,
         "pda/pheanstalk": 20,
         "facebook/php-sdk": 20,
-        "unitedprototype/php-ga": 20
+        "unitedprototype/php-ga": 20,
+        "symfony/console": 20
     }
 }
