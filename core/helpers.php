@@ -40,14 +40,6 @@ function prosc_array_prefixing(string $prefix, array $idList)
 }
 
 /**
- * @return float
- */
-function microtime_float()
-{
-    return (float)array_sum(explode(' ', microtime()));
-}
-
-/**
  * @param $message
  */
 function trace($message)
@@ -73,5 +65,5 @@ function udate($format, $utimestamp = null)
  */
 function convertUnixTimeToIso($unixtime)
 {
-    return date('Y-m-d\TH:i:s', $unixtime);
+    return date('Y-m-d\TH:i:s', $unixtime || time());
 }

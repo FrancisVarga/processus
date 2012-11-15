@@ -69,39 +69,38 @@ namespace Processus
         {
             try {
 
-                $this->_startTime = microtime(TRUE);
+                $this->_startTime = microtime(true);
 
                 define('PATH_ROOT', realpath(dirname(__FILE__) . '/../../../'));
                 define('PATH_CORE', PATH_ROOT . '/library/Processus/core');
                 define('PATH_APP', PATH_ROOT . '/application/php');
                 define('PATH_PUBLIC', PATH_ROOT . '/htdocs');
 
-                // setup autoloader
-                spl_autoload_register(array(
-                    $this,
-                    '_autoLoad'
-                ));
-
                 // display errors for the following part
                 ini_set('display_errors', '1');
 
                 error_reporting(E_ALL | E_STRICT);
 
-                set_error_handler(array(
+                set_error_handler(
+                    array(
+                        "Processus\\ProcessusBootstrap",
+                        'handleError'
+                    )
+                );
 
-                    "Processus\\ProcessusBootstrap",
-                    'handleError'
-                ));
+                register_shutdown_function(
+                    array(
+                        "Processus\\ProcessusBootstrap",
+                        'handleError'
+                    )
+                );
 
-                register_shutdown_function(array(
-                    "Processus\\ProcessusBootstrap",
-                    'handleError'
-                ));
-
-                set_exception_handler(array(
-                    "Processus\\ProcessusBootstrap",
-                    'handleError'
-                ));
+                set_exception_handler(
+                    array(
+                        "Processus\\ProcessusBootstrap",
+                        'handleError'
+                    )
+                );
 
                 //ini_set('display_errors', '0');
 
@@ -136,54 +135,9 @@ namespace Processus
 
             } catch (\Exception $e) {
                 echo json_encode($e);
-                return FALSE;
+
+                return false;
             }
-        }
-
-        /**
-         * @static
-         *
-         * @param $className
-         *
-         * @throws \Zend\Di\Exception\ClassNotFoundException
-         */
-        public function _autoLoad($className)
-        {
-            $rootPath = NULL;
-
-            $pathParts = explode('\\', $className);
-
-            switch ($pathParts[0]) {
-
-                case 'Application':
-                    $rootPath = PATH_APP;
-                    break;
-
-                case 'Processus':
-                    $rootPath = PATH_CORE;
-                    array_shift($pathParts);
-                    break;
-
-                default:
-                    $rootPath = PATH_CORE;
-                    array_unshift($pathParts, 'Contrib');
-                    break;
-            }
-
-            $classFile = $rootPath . DIRECTORY_SEPARATOR . implode(DIRECTORY_SEPARATOR, $pathParts) . '.php';
-
-            if (!file_exists($classFile)) {
-                throw new \Zend\Di\Exception\ClassNotFoundException('Class not found! -> ' . $classFile);
-            }
-
-            $currentTime                = microtime(TRUE) - $this->_startTime;
-            $fileData                   = array(
-                'file' => $classFile,
-                'time' => $currentTime * 1000,
-            );
-            $this->_filesRequireFiles[] = $fileData;
-
-            require_once $classFile;
         }
 
         /**
@@ -191,9 +145,9 @@ namespace Processus
          *
          * @return mixed
          */
-        public static function handleError($errorObj = NULL)
+        public static function handleError($errorObj = null)
         {
-            if ($errorObj == NULL || $errorObj == E_RECOVERABLE_ERROR || $errorObj == E_NOTICE || $errorObj == E_WARNING) {
+            if ($errorObj == null || $errorObj == E_RECOVERABLE_ERROR || $errorObj == E_NOTICE || $errorObj == E_WARNING) {
                 return;
             }
 
@@ -233,6 +187,7 @@ namespace Processus
                 $returnValue['error'] = $error;
 
                 echo json_encode($returnValue);
+
                 return;
             }
 
@@ -249,6 +204,7 @@ namespace Processus
                 $returnValue['error'] = $error;
 
                 echo json_encode($returnValue);
+
                 return;
             }
 
