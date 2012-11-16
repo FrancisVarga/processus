@@ -37,11 +37,10 @@
             "type":"vcs",
             "url":"https://github.com/Crowdpark/processus-spl.git"
         },
-
-        {
-            "type":"vcs",
-            "url":"https://github.com/Crowdpark/processus-ruhebett.git"
-        },
+//        {
+//            "type":"vcs",
+//            "url":"https://github.com/Crowdpark/processus-ruhebett.git"
+//        },
         {
             "type":"vcs",
             "url":"https://github.com/Crowdpark/php-ga.git"
@@ -61,14 +60,16 @@
         "processus/schnarchnase":"dev-master",
         "processus/jsonrpcpipe":"dev-master",
         "processus/spl":"dev-master",
+        "symfony/console":"2.1.*",
+        "symfony/process":"2.1.*",
+        "symfony/yaml":"2.1.*",
         "mustache/mustache":"*",
         "swiftmailer/swiftmailer":"master",
         "pda/pheanstalk":"dev-master",
         "riak/riak-client":"*",
         "facebook/php-sdk":"dev-master",
         "unitedprototype/php-ga":"dev-master",
-        "monolog/monolog":"master",
-        "symfony/console":"dev-master"
+        "monolog/monolog":"master"
     },
     "bin":[
         "bin/speedy.php",
