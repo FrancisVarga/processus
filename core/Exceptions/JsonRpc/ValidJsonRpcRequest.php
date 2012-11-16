@@ -7,6 +7,9 @@
  * To change this template use File | Settings | File Templates.
  */
 namespace Processus\Exceptions\JsonRpc;
+
 class ValidJsonRpcRequest extends \Processus\Exceptions\ProcessusException
 {
+
 }
+

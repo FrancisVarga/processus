@@ -241,7 +241,7 @@ class OpenGraph extends FacebookClient
 
     /**
      * @return mixed
-     * @throws \Processus\Contrib\Facebook\FacebookApiException
+     * @throws \FacebookApiException
      */
     private function _renew_application_access_token()
     {
@@ -256,8 +256,8 @@ class OpenGraph extends FacebookClient
         $ogRequestClient->setUri($this->getGraphUrl() . 'oauth/access_token')
             ->setAdapter(new \Zend\Http\Client\Adapter\Curl())
             ->setConfig(array(
-                             'curloptions'  => $this->_getCurlOptions()
-                        ))
+            'curloptions'  => $this->_getCurlOptions()
+        ))
             ->setMethod('GET')
             ->setParameterGet($data)
             ->send();
@@ -274,7 +274,7 @@ class OpenGraph extends FacebookClient
                 'error_code'        => $ogResponse->error->code
             );
 
-            throw new \Processus\Contrib\Facebook\FacebookApiException($exceptionDetails);
+            throw new \FacebookApiException($exceptionDetails);
         }
 
         return $facebookResponseParams['access_token'];

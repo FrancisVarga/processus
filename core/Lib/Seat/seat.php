@@ -45,16 +45,16 @@ namespace Processus\Lib\Seat
                 ":" . (string)$this->port .
                 "/" . $this->db .
                 "/" . (string)$docid;
-            $req = new HTTP_Request2($url);
-            $req = $req->setMethod(HTTP_Request2::METHOD_GET)
+            $req = new \HTTP_Request2($url);
+            $req = $req->setMethod(\HTTP_Request2::METHOD_GET)
                 ->setHeader(array(
-                                 'User-Agent' => self::USER_AGENT
-                            ));
+                'User-Agent' => self::USER_AGENT
+            ));
             if (isset($this->user) && isset($this->pass)) {
                 $req = $req->setAuth($this->user, $this->pass);
             }
             $resp = $req->send();
-            return json_decode($resp->getBody());
+            return json_decode($resp->getBody(), TRUE);
         }
 
         public function post($path = '')
@@ -63,17 +63,17 @@ namespace Processus\Lib\Seat
                 ":" . (string)$this->port .
                 "/" . $this->db .
                 "/" . (string)$path;
-            $req = new HTTP_Request2($url);
-            $req = $req->setMethod(HTTP_Request2::METHOD_POST)
+            $req = new \HTTP_Request2($url);
+            $req = $req->setMethod(\HTTP_Request2::METHOD_POST)
                 ->setHeader(array(
-                                 'Content-Type' => 'application/json',
-                                 'User-Agent'   => self::USER_AGENT
-                            ));
+                'Content-Type' => 'application/json',
+                'User-Agent'   => self::USER_AGENT
+            ));
             if (isset($this->user) && isset($this->pass)) {
                 $req = $req->setAuth($this->user, $this->pass);
             }
             $resp = $req->send();
-            return json_decode($resp->getBody());
+            return json_decode($resp->getBody(), TRUE);
         }
 
         public function put($doc = array())
@@ -83,24 +83,25 @@ namespace Processus\Lib\Seat
                 ":" . (string)$this->port .
                 "/" . $this->db .
                 "/" . $doc['_id'];
+
             unset($doc['_id']);
             $json = json_encode($doc);
-            $req  = new HTTP_Request2($url);
-            $req  = $req->setMethod(HTTP_Request2::METHOD_PUT)
+            $req  = new \HTTP_Request2($url);
+            $req  = $req->setMethod(\HTTP_Request2::METHOD_PUT)
                 ->setHeader(array(
-                                 'Content-Type' => 'application/json',
-                                 'User-Agent'   => self::USER_AGENT
-                            ))
+                'Content-Type' => 'application/json',
+                'User-Agent'   => self::USER_AGENT
+            ))
                 ->setBody($json);
             if (isset($this->user) && isset($this->pass)) {
                 $req = $req->setAuth($this->user, $this->pass);
             }
             $resp = $req->send();
-            return json_decode($resp->getBody());
+            return json_decode($resp->getBody(), TRUE);
         }
 
         // destroy doc in db
-        public function delete($doc = false)
+        public function delete($doc = FALSE)
         {
             $doc = (array)$doc;
             $url = "http://" . $this->host .
@@ -108,16 +109,16 @@ namespace Processus\Lib\Seat
                 "/" . $this->db .
                 "/" . $doc['_id'] .
                 "?rev=" . $doc['_rev'];
-            $req = new HTTP_Request2($url);
-            $req = $req->setMethod(HTTP_Request2::METHOD_DELETE)
+            $req = new \HTTP_Request2($url);
+            $req = $req->setMethod(\HTTP_Request2::METHOD_DELETE)
                 ->setHeader(array(
-                                 'User-Agent' => self::USER_AGENT
-                            ));
+                'User-Agent' => self::USER_AGENT
+            ));
             if (isset($this->user) && isset($this->pass)) {
                 $req = $req->setAuth($this->user, $this->pass);
             }
             $resp = $req->send();
-            return json_decode($resp->getBody());
+            return json_decode($resp->getBody(), TRUE);
         }
 
         public function pushViews()
@@ -137,22 +138,22 @@ namespace Processus\Lib\Seat
                             "_id"     => "_design/" . $design_doc,
                             "language"=> "javascript",
                             "views"   => array(
-                                $view=> null
+                                $view=> NULL
                             )
                         );
                         $doc["views"] = (object)$doc["views"];
                         $doc          = (object)$doc;
                     }
-                    $update = false;
+                    $update = FALSE;
                     // map
                     if ($doc->views->$view->map != file_get_contents('./views/' . $db . '/' . $design_doc . '/' . $view . '/map.js')) {
                         $doc->views->$view->map = file_get_contents('./views/' . $db . '/' . $design_doc . '/' . $view . '/map.js');
-                        $update                 = true;
+                        $update                 = TRUE;
                     }
                     // reduce
                     if (file_exists('./views/' . $db . '/' . $design_doc . '/' . $view . '/reduce.js') && ($doc->views->$view->reduce != file_get_contents('./views/' . $db . '/' . $design_doc . '/' . $view . '/reduce.js'))) {
                         $doc->views->$view->reduce = file_get_contents('./views/' . $db . '/' . $design_doc . '/' . $view . '/reduce.js');
-                        $update                    = true;
+                        $update                    = TRUE;
                     }
                     if ($update) {
                         $this->put($doc);
@@ -165,7 +166,7 @@ namespace Processus\Lib\Seat
             return $updated_views;
         }
 
-        function __construct($url = null, $user = null, $pass = null)
+        function __construct($url = NULL, $user = NULL, $pass = NULL)
         {
             $url = parse_url($url);
             if (isset($url['host']) && strlen($url['host']) > 0) {
@@ -187,7 +188,7 @@ namespace Processus\Lib\Seat
                     }
                 }
             } else {
-                $this->db = false;
+                $this->db = FALSE;
             }
             if (isset($url['user'])) {
                 $this->user = $url['user'];

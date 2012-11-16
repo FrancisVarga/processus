@@ -12,7 +12,7 @@ abstract class AbstractClass
     /**
      * @return \Application\ApplicationContext
      */
-    public function getApplicationContext()
+    protected function getApplicationContext()
     {
         return \Application\ApplicationContext::getInstance();
     }

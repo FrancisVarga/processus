@@ -12,7 +12,7 @@ namespace Processus\Lib\Facebook
     {
 
         /**
-         * @var \Processus\Contrib\Facebook\Facebook
+         * @var \Facebook
          */
         private $_facebookSdk;
 
@@ -55,6 +55,7 @@ namespace Processus\Lib\Facebook
         public function getAppId()
         {
             $fbConfig = $this->getFacebookClientConfig();
+
             return $fbConfig['appId'];
         }
 
@@ -69,11 +70,13 @@ namespace Processus\Lib\Facebook
                     ->getRegistry()
                     ->getConfig("Facebook");
             }
+
             return $this->_facebookSdkConf;
         }
 
         /**
          * @return array|mixed
+         * @throws \Exception
          */
         public function getUserFacebookData()
         {
@@ -83,8 +86,7 @@ namespace Processus\Lib\Facebook
 
                     $this->_userFacebookData = $this->getFacebookSdk()->api("/me");
 
-                }
-                catch (\Exception $error) {
+                } catch (\Exception $error) {
                     throw $error;
                 }
             }
@@ -108,6 +110,7 @@ namespace Processus\Lib\Facebook
             if (!$this->_userId) {
                 $this->_userId = $this->getFacebookSdk()->getUser();
             }
+
             return $this->_userId;
         }
 
@@ -118,8 +121,8 @@ namespace Processus\Lib\Facebook
          */
         public function getUserFriends($userFbId = null)
         {
-            $defaultCache    = $this->getProcessusContext()->getDefaultCache();
-            $fbNum           = (int)$userFbId > 0 ? $userFbId : $this->getUserId();
+            $defaultCache = $this->getProcessusContext()->getDefaultCache();
+            $fbNum        = (int)$userFbId > 0 ? $userFbId : $this->getUserId();
 
             $memKey          = "FacebookClient_getUserFriends_" . $fbNum;
             $facebookFriends = $defaultCache->fetch($memKey);
@@ -139,12 +142,12 @@ namespace Processus\Lib\Facebook
         }
 
         /**
-         * @return \Processus\Contrib\Facebook\Facebook
+         * @return \Facebook
          */
         public function getFacebookSdk()
         {
             if (!$this->_facebookSdk) {
-                $this->_facebookSdk = new \Processus\Contrib\Facebook\Facebook($this->getFacebookClientConfig()->toArray());
+                $this->_facebookSdk = new \Facebook($this->getFacebookClientConfig()->toArray());
             }
 
             return $this->_facebookSdk;
@@ -175,8 +178,7 @@ namespace Processus\Lib\Facebook
         {
             try {
                 $userData = $this->getFacebookSdk()->api("/" . $facebookUserId);
-            }
-            catch (\Exception $error) {
+            } catch (\Exception $error) {
                 throw $error;
             }
 
