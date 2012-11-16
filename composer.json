@@ -37,10 +37,6 @@
             "type":"vcs",
             "url":"https://github.com/Crowdpark/processus-spl.git"
         },
-//        {
-//            "type":"vcs",
-//            "url":"https://github.com/Crowdpark/processus-ruhebett.git"
-//        },
         {
             "type":"vcs",
             "url":"https://github.com/Crowdpark/php-ga.git"
