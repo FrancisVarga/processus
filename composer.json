@@ -1,10 +1,10 @@
 {
-    "name":"processus/framework",
+    "name":"processus/unicorn",
     "type":"framework",
     "keywords":["jsonrpc", "games", "rpc", "framework"],
     "homepage":"http://github.com/Crowdpark/processus",
     "description":"JSON-RPC Framework for Apps and Games",
-    "license": "MIT",
+    "license":"MIT",
     "authors":[
         {
             "name":"Francis Varga",
@@ -69,13 +69,6 @@
         "unitedprototype/php-ga":"dev-master",
         "monolog/monolog":"master",
         "symfony/console":"dev-master"
-    },
-    "extra":{
-        "processus-app-dir":"application",
-        "processus-web-dir":"htdocs",
-        "branch-alias":{
-            "dev-master":"composer"
-        }
     },
     "bin":[
         "bin/speedy.php",
