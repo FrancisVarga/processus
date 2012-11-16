@@ -1,6 +1,19 @@
 {
     "name":"processus/framework",
+    "type":"framework",
+    "keywords":["jsonrpc", "games", "rpc", "framework"],
+    "homepage":"http://github.com/Crowdpark/processus",
     "description":"JSON-RPC Framework for Apps and Games",
+    "authors":[
+        {
+            "name":"Francis Varga",
+            "email":"fv@crowdpark.com",
+            "homepage":"http://crowdpark.com"
+        }
+    ],
+    "support":{
+        "issues":"https://github.com/Crowdpark/processus/issues"
+    },
     "autoload":{
         "psr-0":{
             "Processus\\":"core/"
