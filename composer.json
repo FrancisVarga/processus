@@ -48,7 +48,7 @@
         },
         {
             "type":"vcs",
-            "url":"https://github.com/FrancisVarga/monolog.git"
+            "url":"https://github.com/Crowdpark/monolog.git"
         }
     ],
     "require":{
