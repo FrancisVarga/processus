@@ -58,7 +58,10 @@
     },
     "extra":{
         "processus-app-dir":"application",
-        "processus-web-dir":"htdocs"
+        "processus-web-dir":"htdocs",
+        "branch-alias":{
+            "dev-master":"composer"
+        }
     },
     "bin":[
         "bin/speedy.php",
