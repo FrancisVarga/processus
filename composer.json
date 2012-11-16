@@ -4,6 +4,7 @@
     "keywords":["jsonrpc", "games", "rpc", "framework"],
     "homepage":"http://github.com/Crowdpark/processus",
     "description":"JSON-RPC Framework for Apps and Games",
+    "license": "MIT",
     "authors":[
         {
             "name":"Francis Varga",
