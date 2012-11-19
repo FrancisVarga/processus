@@ -60,6 +60,7 @@
         "pda/pheanstalk":"dev-master",
         "facebook/php-sdk":"3.2.0",
         "monolog/monolog":"dev-master",
+        "processus/ruhebett":"dev-master",
         "processus/jsonrpcpipe":"dev-master",
         "processus/schnarchnase":"dev-master",
         "processus/spl":"dev-master",
