@@ -62,7 +62,7 @@
         "monolog/monolog":"self.version"
     },
     "replace":{
-        "processus/jsonrpcpipe":"self.version"
+        "processus/jsonrpcpipe":"dev-master"
     },
     "bin":[
         "bin/speedy.php",
