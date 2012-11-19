@@ -60,7 +60,10 @@
         "pda/pheanstalk":"dev-master",
         "facebook/php-sdk":"3.2.0",
         "monolog/monolog":"dev-master",
-        "processus/jsonrpcpipe":"dev-master"
+        "processus/jsonrpcpipe":"dev-master",
+        "processus/schnarchnase":"dev-master",
+        "processus/spl":"dev-master",
+        "unitedprototype/php-ga":"dev-master"
     },
     "require-dev":{
     },
