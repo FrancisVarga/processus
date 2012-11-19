@@ -60,12 +60,11 @@
         "swiftmailer/swiftmailer":"4.2.2",
         "pda/pheanstalk":"dev-master",
         "facebook/php-sdk":"3.2.0",
-        "monolog/monolog":"dev-master"
+        "monolog/monolog":"self.version"
     },
     "bin":[
         "bin/speedy.php",
         "bin/worker.sh",
         "console/cli.php"
-    ],
-    "minimum-stability":"dev"
+    ]
 }
