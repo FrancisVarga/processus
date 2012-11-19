@@ -52,7 +52,6 @@
         "zendframework/zend-server":"2.0",
         "zendframework/zend-http":"2.0",
         "zendframework/zend-json":"2.0",
-        "unitedprototype/php-ga":"dev-master",
         "symfony/console":"2.1.*",
         "symfony/process":"2.1.*",
         "symfony/yaml":"2.1.*",
