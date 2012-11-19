@@ -4,7 +4,7 @@
     "keywords":["jsonrpc", "games", "rpc", "framework"],
     "homepage":"http://github.com/Crowdpark/processus",
     "description":"JSON-RPC Framework for Apps and Games",
-    "minimum-stability": "dev",
+    "minimum-stability":"dev",
     "license":"MIT",
     "authors":[
         {
