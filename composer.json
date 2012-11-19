@@ -44,6 +44,10 @@
         {
             "type":"vcs",
             "url":"https://github.com/Crowdpark/monolog.git"
+        },
+        {
+            "type":"vcs",
+            "url":"https://github.com/Crowdpark/processus-ruhebett.git"
         }
     ],
     "require":{

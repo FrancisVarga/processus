@@ -18,13 +18,13 @@ namespace Processus\Lib\Db
         {
             $this->_memcachedClient = new \Memcached($id);
 
-            $this->_memcachedClient->setOption(\Memcached::OPT_COMPRESSION, FALSE);
+            $this->_memcachedClient->setOption(\Memcached::OPT_COMPRESSION, false);
             $this->_memcachedClient->setOption(\Memcached::OPT_CONNECT_TIMEOUT, 500);
-            $this->_memcachedClient->setOption(\Memcached::OPT_TCP_NODELAY, TRUE);
-            $this->_memcachedClient->setOption(\Memcached::OPT_CACHE_LOOKUPS, TRUE);
-            $this->_memcachedClient->setOption(\Memcached::OPT_NO_BLOCK, TRUE);
+            $this->_memcachedClient->setOption(\Memcached::OPT_TCP_NODELAY, true);
+            $this->_memcachedClient->setOption(\Memcached::OPT_CACHE_LOOKUPS, true);
+            $this->_memcachedClient->setOption(\Memcached::OPT_NO_BLOCK, true);
             $this->_memcachedClient->setOption(\Memcached::OPT_POLL_TIMEOUT, 500);
-            $this->_memcachedClient->setOption(\Memcached::SERIALIZER_JSON, TRUE);
+            $this->_memcachedClient->setOption(\Memcached::SERIALIZER_JSON, true);
 
             if (count($this->_memcachedClient->getServerList()) <= 1) {
                 $this->_memcachedClient->addServer($host, $port);
@@ -79,6 +79,7 @@ namespace Processus\Lib\Db
          * @param int    $expiredTime
          *
          * @return int
+         * @throws \Processus\Exceptions\JsonRpc\ServerException
          */
         public function insert($key = "foobar", $value = array(), $expiredTime = 1)
         {
@@ -87,6 +88,7 @@ namespace Processus\Lib\Db
             }
             $jsonDoc = json_encode($value);
             $this->_memcachedClient->set($key, $jsonDoc, $expiredTime);
+
             return $this->_memcachedClient->getResultCode();
         }
 
@@ -98,6 +100,7 @@ namespace Processus\Lib\Db
         public function getMultipleByKey(array $keys)
         {
             $stupidPHP = null;
+
             return json_decode($this->_memcachedClient->getMulti($keys, $stupidPHP, \Memcached::GET_PRESERVE_ORDER));
         }
 
