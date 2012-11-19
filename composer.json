@@ -69,5 +69,6 @@
         "bin/speedy.php",
         "bin/worker.sh",
         "console/cli.php"
-    ]
+    ],
+    "minimum-stability":"dev"
 }
