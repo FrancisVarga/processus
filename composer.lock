@@ -1,5 +1,5 @@
 {
-    "hash": "17352a98029eace1864bae4d18c66833",
+    "hash": "52774c488b458f7e56e1e0cb0a4c7677",
     "packages": [
         {
             "name": "facebook/php-sdk",
@@ -22,7 +22,7 @@
             },
             "time": "2012-08-14 10:28:20",
             "type": "library",
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "classmap": [
                     "src"
@@ -49,12 +49,12 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/FrancisVarga/monolog.git",
+                "url": "https://github.com/Crowdpark/monolog.git",
                 "reference": "a90496bfa20598d51e10153fd3b8e8c7a1730ede"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/FrancisVarga/monolog/archive/a90496bfa20598d51e10153fd3b8e8c7a1730ede.zip",
+                "url": "https://github.com/Crowdpark/monolog/archive/a90496bfa20598d51e10153fd3b8e8c7a1730ede.zip",
                 "reference": "a90496bfa20598d51e10153fd3b8e8c7a1730ede",
                 "shasum": ""
             },
@@ -100,7 +100,7 @@
                 "logging"
             ],
             "support": {
-                "source": "https://github.com/FrancisVarga/monolog/tree/master"
+                "source": "https://github.com/Crowdpark/monolog/tree/master"
             }
         },
         {
@@ -122,7 +122,7 @@
             },
             "time": "2012-09-12 09:13:06",
             "type": "library",
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-0": {
                     "Mustache": "src/"
@@ -243,18 +243,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Crowdpark/processus-ruhebett.git",
-                "reference": "977797b451d8da10d628ea6b33ca7771e96a2269"
+                "reference": "06fc45f39a2067fa66a0d366361b1f8ec7d9d1ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/Crowdpark/processus-ruhebett/archive/977797b451d8da10d628ea6b33ca7771e96a2269.zip",
-                "reference": "977797b451d8da10d628ea6b33ca7771e96a2269",
+                "url": "https://github.com/Crowdpark/processus-ruhebett/archive/06fc45f39a2067fa66a0d366361b1f8ec7d9d1ea.zip",
+                "reference": "06fc45f39a2067fa66a0d366361b1f8ec7d9d1ea",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=5.3"
             },
-            "time": "1352477050",
+            "time": "1353328370",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -390,7 +390,7 @@
                     "dev-master": "4.2-dev"
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "files": [
                     "lib/swift_required.php"
@@ -417,17 +417,17 @@
         },
         {
             "name": "symfony/class-loader",
-            "version": "2.1.x-dev",
+            "version": "v2.1.3",
             "target-dir": "Symfony/Component/ClassLoader",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/ClassLoader",
-                "reference": "29e26e8a3df2fd62a569e2bab41166e1798b1e0c"
+                "reference": "v2.1.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/ClassLoader/archive/29e26e8a3df2fd62a569e2bab41166e1798b1e0c.zip",
-                "reference": "29e26e8a3df2fd62a569e2bab41166e1798b1e0c",
+                "url": "https://github.com/symfony/ClassLoader/zipball/v2.1.3",
+                "reference": "v2.1.3",
                 "shasum": ""
             },
             "require": {
@@ -436,14 +436,14 @@
             "require-dev": {
                 "symfony/finder": "2.1.*"
             },
-            "time": "1352368308",
+            "time": "2012-10-27 08:59:21",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "2.1-dev"
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-0": {
                     "Symfony\\Component\\ClassLoader": ""
@@ -467,30 +467,30 @@
         },
         {
             "name": "symfony/console",
-            "version": "2.1.x-dev",
+            "version": "v2.1.3",
             "target-dir": "Symfony/Component/Console",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console",
-                "reference": "528b030bd94d74b06735c9da9fd9495db0567800"
+                "reference": "v2.1.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Console/archive/528b030bd94d74b06735c9da9fd9495db0567800.zip",
-                "reference": "528b030bd94d74b06735c9da9fd9495db0567800",
+                "url": "https://github.com/symfony/Console/zipball/v2.1.3",
+                "reference": "v2.1.3",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "1352451171",
+            "time": "2012-10-22 07:37:12",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "2.1-dev"
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-0": {
                     "Symfony\\Component\\Console": ""
@@ -514,30 +514,30 @@
         },
         {
             "name": "symfony/process",
-            "version": "2.1.x-dev",
+            "version": "v2.1.3",
             "target-dir": "Symfony/Component/Process",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process",
-                "reference": "5437d5f85a089d227337a8be4a46d160b60e1ab1"
+                "reference": "v2.1.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Process/archive/5437d5f85a089d227337a8be4a46d160b60e1ab1.zip",
-                "reference": "5437d5f85a089d227337a8be4a46d160b60e1ab1",
+                "url": "https://github.com/symfony/Process/zipball/v2.1.3",
+                "reference": "v2.1.3",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "1352368308",
+            "time": "2012-10-20 00:10:30",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "2.1-dev"
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-0": {
                     "Symfony\\Component\\Process": ""
@@ -561,30 +561,30 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "2.1.x-dev",
+            "version": "v2.1.3",
             "target-dir": "Symfony/Component/Yaml",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml",
-                "reference": "e1aff6871fd39607d7ce638ff6b1f971cde6fe6a"
+                "reference": "v2.1.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Yaml/archive/e1aff6871fd39607d7ce638ff6b1f971cde6fe6a.zip",
-                "reference": "e1aff6871fd39607d7ce638ff6b1f971cde6fe6a",
+                "url": "https://github.com/symfony/Yaml/zipball/v2.1.3",
+                "reference": "v2.1.3",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "1352368308",
+            "time": "2012-10-29 04:15:41",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "2.1-dev"
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-0": {
                     "Symfony\\Component\\Yaml": ""
@@ -751,6 +751,8 @@
         "processus/schnarchnase": 20,
         "processus/jsonrpcpipe": 20,
         "processus/spl": 20,
-        "unitedprototype/php-ga": 20
+        "unitedprototype/php-ga": 20,
+        "pda/pheanstalk": 20,
+        "monolog/monolog": 20
     }
 }
