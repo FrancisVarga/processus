@@ -59,10 +59,11 @@
         "swiftmailer/swiftmailer":"4.2.2",
         "pda/pheanstalk":"dev-master",
         "facebook/php-sdk":"3.2.0",
-        "monolog/monolog":"self.version"
+        "monolog/monolog":"self.version",
+        "processus/jsonrpcpipe":"dev-master"
     },
     "replace":{
-        "processus/jsonrpcpipe":"dev-master"
+
     },
     "bin":[
         "bin/speedy.php",
