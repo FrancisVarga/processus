@@ -47,7 +47,6 @@
         }
     ],
     "require":{
-        "php":">=5.3",
         "zendframework/zend-db":"2.0",
         "zendframework/zend-server":"2.0",
         "zendframework/zend-http":"2.0",
@@ -58,8 +57,10 @@
         "mustache/mustache":"2.0.2",
         "swiftmailer/swiftmailer":"4.2.2",
         "pda/pheanstalk":"dev-master",
-        "facebook/php-sdk":"3.2.0",
-        "monolog/monolog":"self.version",
+        "facebook/php-sdk":"3.2.0"
+    },
+    "require-dev":{
+        "monolog/monolog":"dev-master",
         "processus/jsonrpcpipe":"dev-master"
     },
     "replace":{
