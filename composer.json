@@ -62,7 +62,7 @@
         "symfony/yaml":"2.1.*",
         "mustache/mustache":"2.0.2",
         "swiftmailer/swiftmailer":"4.2.2",
-        "pda/pheanstalk":"1.1.0",
+        "pda/pheanstalk":"master",
         "facebook/php-sdk":"3.2.0",
         "monolog/monolog":"master"
     },
@@ -70,6 +70,5 @@
         "bin/speedy.php",
         "bin/worker.sh",
         "console/cli.php"
-    ],
-    "minimum-stability":"dev"
+    ]
 }

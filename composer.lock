@@ -1,9 +1,9 @@
 {
-    "hash": "947dcf14ad6fff578a46ccbb4bd48fd4",
+    "hash": "d0125548a6e9cdd3f10d8434108cb984",
     "packages": [
         {
             "name": "facebook/php-sdk",
-            "version": "dev-master",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "git://github.com/facebook/facebook-php-sdk.git",
@@ -11,7 +11,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/facebook/facebook-php-sdk/archive/v3.2.0.zip",
+                "url": "https://github.com/facebook/facebook-php-sdk/zipball/v3.2.0",
                 "reference": "v3.2.0",
                 "shasum": ""
             },
@@ -20,7 +20,7 @@
                 "ext-curl": "*",
                 "ext-json": "*"
             },
-            "time": "1344965300",
+            "time": "2012-08-14 10:28:20",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -105,7 +105,7 @@
         },
         {
             "name": "mustache/mustache",
-            "version": "dev-master",
+            "version": "v2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/mustache.php",
@@ -113,14 +113,14 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/bobthecow/mustache.php/archive/v2.0.2.zip",
+                "url": "https://github.com/bobthecow/mustache.php/zipball/v2.0.2",
                 "reference": "v2.0.2",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "1347466386",
+            "time": "2012-09-12 09:13:06",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -366,95 +366,27 @@
             }
         },
         {
-            "name": "riak/riak-client",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nacmartin/riak-client",
-                "reference": "cea446f04d759caaef44020a2064a38b41cbdfab"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/nacmartin/riak-client/archive/cea446f04d759caaef44020a2064a38b41cbdfab.zip",
-                "reference": "cea446f04d759caaef44020a2064a38b41cbdfab",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "time": "1335700065",
-            "type": "library",
-            "installation-source": "source",
-            "autoload": {
-                "psr-0": {
-                    "Riak": "lib/"
-                }
-            },
-            "license": [
-                "Apache 2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Nacho Martín",
-                    "email": "nitram.ohcan@gmail.com"
-                },
-                {
-                    "name": "Kevin Burns"
-                },
-                {
-                    "name": "Jeffrey Massung"
-                },
-                {
-                    "name": "Mark Phillips"
-                },
-                {
-                    "name": "Bryank Fink"
-                },
-                {
-                    "name": "Abel Perez"
-                },
-                {
-                    "name": "Scoyy Lystig Fritchie"
-                },
-                {
-                    "name": "Jon Meredith"
-                },
-                {
-                    "name": "dreverri"
-                },
-                {
-                    "name": "fakepop"
-                }
-            ],
-            "description": "Riak client",
-            "homepage": "http://wiki.basho.com/Riak.html",
-            "keywords": [
-                "persistence",
-                "riak"
-            ]
-        },
-        {
             "name": "swiftmailer/swiftmailer",
-            "version": "dev-master",
+            "version": "v4.2.2",
             "source": {
                 "type": "git",
                 "url": "git://github.com/swiftmailer/swiftmailer.git",
-                "reference": "60536978cf1803e4562cbcdd59b67591dd01041e"
+                "reference": "v4.2.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/swiftmailer/swiftmailer/zipball/60536978cf1803e4562cbcdd59b67591dd01041e",
-                "reference": "60536978cf1803e4562cbcdd59b67591dd01041e",
+                "url": "https://github.com/swiftmailer/swiftmailer/zipball/v4.2.2",
+                "reference": "v4.2.2",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "1351173729",
+            "time": "2012-10-25 01:30:40",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.3-dev"
+                    "dev-master": "4.2-dev"
                 }
             },
             "installation-source": "source",
@@ -534,33 +466,33 @@
         },
         {
             "name": "symfony/console",
-            "version": "dev-master",
+            "version": "2.1.x-dev",
             "target-dir": "Symfony/Component/Console",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console",
-                "reference": "6da537054e8f9f795e64a5b02eb7f9646c9b59e7"
+                "reference": "528b030bd94d74b06735c9da9fd9495db0567800"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Console/archive/6da537054e8f9f795e64a5b02eb7f9646c9b59e7.zip",
-                "reference": "6da537054e8f9f795e64a5b02eb7f9646c9b59e7",
+                "url": "https://github.com/symfony/Console/archive/528b030bd94d74b06735c9da9fd9495db0567800.zip",
+                "reference": "528b030bd94d74b06735c9da9fd9495db0567800",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "1352815684",
+            "time": "1352451171",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "2.1-dev"
                 }
             },
             "installation-source": "source",
             "autoload": {
                 "psr-0": {
-                    "Symfony\\Component\\Console\\": ""
+                    "Symfony\\Component\\Console": ""
                 }
             },
             "license": [
@@ -577,6 +509,100 @@
                 }
             ],
             "description": "Symfony Console Component",
+            "homepage": "http://symfony.com"
+        },
+        {
+            "name": "symfony/process",
+            "version": "2.1.x-dev",
+            "target-dir": "Symfony/Component/Process",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Process",
+                "reference": "5437d5f85a089d227337a8be4a46d160b60e1ab1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/symfony/Process/archive/5437d5f85a089d227337a8be4a46d160b60e1ab1.zip",
+                "reference": "5437d5f85a089d227337a8be4a46d160b60e1ab1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "time": "1352368308",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1-dev"
+                }
+            },
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Process": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Process Component",
+            "homepage": "http://symfony.com"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "2.1.x-dev",
+            "target-dir": "Symfony/Component/Yaml",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Yaml",
+                "reference": "e1aff6871fd39607d7ce638ff6b1f971cde6fe6a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/symfony/Yaml/archive/e1aff6871fd39607d7ce638ff6b1f971cde6fe6a.zip",
+                "reference": "e1aff6871fd39607d7ce638ff6b1f971cde6fe6a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "time": "1352368308",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1-dev"
+                }
+            },
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Yaml": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com"
         },
         {
@@ -724,9 +750,6 @@
         "processus/schnarchnase": 20,
         "processus/jsonrpcpipe": 20,
         "processus/spl": 20,
-        "pda/pheanstalk": 20,
-        "facebook/php-sdk": 20,
-        "unitedprototype/php-ga": 20,
-        "symfony/console": 20
+        "unitedprototype/php-ga": 20
     }
 }
