@@ -59,7 +59,7 @@
         "swiftmailer/swiftmailer":"4.2.2",
         "pda/pheanstalk":"dev-master",
         "facebook/php-sdk":"3.2.0",
-        "monolog/monolog":"dev-master",
+        "monolog/monolog-crowdpark-module":"dev-master",
         "processus/ruhebett":"dev-master",
         "processus/jsonrpcpipe":"dev-master",
         "processus/schnarchnase":"dev-master",
@@ -69,7 +69,6 @@
     "require-dev":{
     },
     "replace":{
-
     },
     "bin":[
         "bin/speedy.php",
