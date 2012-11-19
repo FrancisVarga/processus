@@ -57,11 +57,11 @@
         "mustache/mustache":"2.0.2",
         "swiftmailer/swiftmailer":"4.2.2",
         "pda/pheanstalk":"dev-master",
-        "facebook/php-sdk":"3.2.0"
-    },
-    "require-dev":{
+        "facebook/php-sdk":"3.2.0",
         "monolog/monolog":"dev-master",
         "processus/jsonrpcpipe":"dev-master"
+    },
+    "require-dev":{
     },
     "replace":{
 
