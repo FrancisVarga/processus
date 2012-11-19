@@ -52,7 +52,6 @@
         "zendframework/zend-server":"2.0",
         "zendframework/zend-http":"2.0",
         "zendframework/zend-json":"2.0",
-        "processus/jsonrpcpipe":"self.version",
         "symfony/console":"2.1.*",
         "symfony/process":"2.1.*",
         "symfony/yaml":"2.1.*",
@@ -61,6 +60,9 @@
         "pda/pheanstalk":"dev-master",
         "facebook/php-sdk":"3.2.0",
         "monolog/monolog":"self.version"
+    },
+    "replace":{
+        "processus/jsonrpcpipe":"self.version"
     },
     "bin":[
         "bin/speedy.php",
