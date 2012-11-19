@@ -31,7 +31,7 @@
         },
         {
             "type":"vcs",
-            "url":"https://github.com/bastman/processus-jsonrpc-pipe.git"
+            "url":"https://github.com/Crowdpark/processus-jsonrpc-pipe.git"
         },
         {
             "type":"vcs",
@@ -52,6 +52,7 @@
         "zendframework/zend-server":"2.0",
         "zendframework/zend-http":"2.0",
         "zendframework/zend-json":"2.0",
+        "processus/jsonrpcpipe":"dev-master",
         "symfony/console":"2.1.*",
         "symfony/process":"2.1.*",
         "symfony/yaml":"2.1.*",
