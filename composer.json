@@ -52,7 +52,6 @@
         "zendframework/zend-server":"2.0",
         "zendframework/zend-http":"2.0",
         "zendframework/zend-json":"2.0",
-        "processus/schnarchnase":"dev-master",
         "processus/jsonrpcpipe":"dev-master",
         "processus/spl":"dev-master",
         "unitedprototype/php-ga":"dev-master",
