@@ -1,76 +1,77 @@
 {
-    "name":"processus/unicorn",
-    "type":"framework",
-    "keywords":["jsonrpc", "games", "rpc", "framework"],
-    "homepage":"http://github.com/Crowdpark/processus",
-    "description":"JSON-RPC Framework for Apps and Games",
-    "minimum-stability":"dev",
-    "license":"MIT",
-    "authors":[
+    "name": "processus/unicorn",
+    "type": "framework",
+    "keywords": ["jsonrpc", "games", "rpc", "framework"],
+    "homepage": "http://github.com/Crowdpark/processus",
+    "description": "JSON-RPC Framework for Apps and Games",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
         {
-            "name":"Francis Varga",
-            "email":"fv@crowdpark.com",
-            "homepage":"http://crowdpark.com"
+            "name": "Francis Varga",
+            "email": "fv@crowdpark.com",
+            "homepage": "http://crowdpark.com"
         }
     ],
-    "support":{
-        "issues":"https://github.com/Crowdpark/processus/issues"
+    "support": {
+        "issues": "https://github.com/Crowdpark/processus/issues"
     },
-    "autoload":{
-        "psr-0":{
-            "Processus\\":"core/"
+    "autoload": {
+        "psr-0": {
+            "Processus\\": "core/"
         }
     },
-    "repositories":[
+    "repositories": [
         {
-            "type":"composer",
-            "url":"http://packages.zendframework.com/"
+            "type": "composer",
+            "url": "http://packages.zendframework.com/"
         },
         {
-            "type":"vcs",
-            "url":"https://github.com/Crowdpark/processus-schnarchnase.git"
+            "type": "vcs",
+            "url": "https://github.com/Crowdpark/processus-schnarchnase.git"
         },
         {
-            "type":"vcs",
-            "url":"https://github.com/Crowdpark/processus-jsonrpc-pipe.git"
+            "type": "vcs",
+            "url": "https://github.com/Crowdpark/processus-jsonrpc-pipe.git"
         },
         {
-            "type":"vcs",
-            "url":"https://github.com/Crowdpark/processus-spl.git"
+            "type": "vcs",
+            "url": "https://github.com/Crowdpark/processus-spl.git"
         },
         {
-            "type":"vcs",
-            "url":"https://github.com/Crowdpark/php-ga.git"
+            "type": "vcs",
+            "url": "https://github.com/Crowdpark/php-ga.git"
         },
         {
-            "type":"vcs",
-            "url":"https://github.com/Crowdpark/monolog.git"
+            "type": "vcs",
+            "url": "https://github.com/Crowdpark/monolog.git"
         }
     ],
-    "require":{
-        "zendframework/zend-db":"2.0",
-        "zendframework/zend-server":"2.0",
-        "zendframework/zend-http":"2.0",
-        "zendframework/zend-json":"2.0",
-        "symfony/console":"2.1.*",
-        "symfony/process":"2.1.*",
-        "symfony/yaml":"2.1.*",
-        "mustache/mustache":"2.0.2",
-        "swiftmailer/swiftmailer":"4.2.2",
-        "pda/pheanstalk":"dev-master",
-        "facebook/php-sdk":"3.2.0",
-        "monolog/monolog-crowdpark-module":"dev-master",
-        "processus/ruhebett":"dev-master",
-        "processus/jsonrpcpipe":"dev-master",
-        "processus/schnarchnase":"dev-master",
-        "processus/spl":"dev-master",
-        "unitedprototype/php-ga":"dev-master"
+    "require": {
+        "zendframework/zend-db": "2.0",
+        "zendframework/zend-server": "2.0",
+        "zendframework/zend-http": "2.0",
+        "zendframework/zend-json": "2.0",
+        "symfony/console": "2.1.*",
+        "symfony/process": "2.1.*",
+        "symfony/yaml": "2.1.*",
+        "mustache/mustache": "2.0.2",
+        "swiftmailer/swiftmailer": "4.2.2",
+        "pda/pheanstalk": "dev-master",
+        "facebook/php-sdk": "3.2.0",
+        "monolog/monolog-crowdpark-module": "dev-master",
+        "processus/ruhebett": "dev-master",
+        "processus/jsonrpcpipe": "dev-master",
+        "processus/schnarchnase": "dev-master",
+        "processus/spl": "dev-master",
+        "processus/rpcclient": "dev-master",
+        "unitedprototype/php-ga": "dev-master"
     },
-    "require-dev":{
+    "require-dev": {
     },
-    "replace":{
+    "replace": {
     },
-    "bin":[
+    "bin": [
         "bin/speedy.php",
         "bin/worker.sh",
         "console/cli.php"
