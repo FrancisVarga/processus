@@ -55,6 +55,7 @@
         "symfony/console": "2.1.*",
         "symfony/process": "2.1.*",
         "symfony/yaml": "2.1.*",
+        "symfony/config": "2.1.*",
         "mustache/mustache": "2.0.2",
         "swiftmailer/swiftmailer": "4.2.2",
         "pda/pheanstalk": "dev-master",

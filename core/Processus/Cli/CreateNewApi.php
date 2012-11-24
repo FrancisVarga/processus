@@ -7,7 +7,10 @@
  * To change this template use File | Settings | File Templates.
  */
 namespace Processus\Cli;
-class CreateNewApi extends \Symfony\Component\Console\Command\Command
+
+use Symfony\Component\Console\Command\Command;
+
+class CreateNewApi extends Command
 {
 
 }
